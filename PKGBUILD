@@ -10,7 +10,6 @@ depends=('plasma-framework' 'plasma-workspace' 'kdeclarative' 'kglobalaccel'
     'kconfigwidgets' 'kxmlgui' 'kwindowsystem')
 makedepends=('kdoctools' 'extra-cmake-modules')
 source=("https://github.com/audoban/${_name}/archive/v${pkgver}.tar.gz"
-    "fix-cmake-dataengine.patch")
 md5sums=('5d3e9b623e7f6b542a94d544a362978a' '3d78ee1b295dfa8c4c9472742a266893')
 
 prepare() {
