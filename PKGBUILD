@@ -1,3 +1,5 @@
+
+
 pkgname=kdeplasma-applets-playbar2
 _name=PlayBar2
 pkgver=2.3
@@ -34,3 +36,4 @@ package() {
     make DESTDIR="$pkgdir" install
 }
 
+# vim: set ts=4 sws=4 sw=4 ai et
