@@ -10,3 +10,4 @@ Install with kcp:
 ```
 kcp -i kdeplasma-applets-playbar2
 ```
+![screenshot](https://raw.githubusercontent.com/audoban/PlayBar2/master/screenshot.png)
