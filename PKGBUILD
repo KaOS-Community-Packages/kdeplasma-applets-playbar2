@@ -9,11 +9,11 @@ depends=('plasma-framework' 'plasma-workspace' 'kdeclarative' 'kglobalaccel'
     'kconfigwidgets' 'kxmlgui' 'kwindowsystem')
 makedepends=('kdoctools' 'extra-cmake-modules')
 source=("https://github.com/audoban/PlayBar2/archive/v${pkgver}.tar.gz")
-md5sums=('dc6240fbcf99a25617261dcc3fb24f50')
+md5sums=('2b3ed58d2f2d146ad245112d03f1070c')
 
 prepare() {
     mkdir -p $srcdir/build
-    cd PlayBar2-${pkgver}
+    cd playbar2-${pkgver}
     }
 
 build() {
@@ -22,7 +22,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DLIB_INSTALL_DIR=lib \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-        ../PlayBar2-${pkgver}
+        ../playbar2-${pkgver}
     make
 }
 
