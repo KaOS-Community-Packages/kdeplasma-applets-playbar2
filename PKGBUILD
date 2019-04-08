@@ -1,6 +1,7 @@
 pkgname=kdeplasma-applets-playbar2
 pkgver=2.5
-pkgrel=1
+_pkgver=fix-qtquick
+pkgrel=2
 pkgdesc="Mpris2 Client for Plasma5"
 arch=('x86_64')
 url="https://github.com/audoban/PlayBar2"
@@ -8,12 +9,12 @@ license=('GPL')
 depends=('plasma-framework' 'plasma-workspace' 'kdeclarative' 'kglobalaccel'
     'kconfigwidgets' 'kxmlgui' 'kwindowsystem')
 makedepends=('kdoctools' 'extra-cmake-modules')
-source=("https://github.com/audoban/PlayBar2/archive/v${pkgver}.tar.gz")
-md5sums=('2b3ed58d2f2d146ad245112d03f1070c')
+source=("https://github.com/dkadioglu/PlayBar2/archive/fix-qtquick.zip")
+md5sums=('52ca4bb27632429f971eef224e9993da')
 
 prepare() {
     mkdir -p $srcdir/build
-    cd playbar2-${pkgver}
+    cd PlayBar2-${_pkgver}
     }
 
 build() {
@@ -22,7 +23,7 @@ build() {
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DLIB_INSTALL_DIR=lib \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
-        ../playbar2-${pkgver}
+        ../PlayBar2-${_pkgver}
     make
 }
 
@@ -30,3 +31,4 @@ package() {
     cd $srcdir/build
     make DESTDIR="$pkgdir" install
 }
+
